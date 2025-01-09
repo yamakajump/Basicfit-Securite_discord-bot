@@ -4,6 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('unban')
         .setDescription("Débannir un utilisateur du serveur.")
+        .setDefaultMemberPermissions('32'), // = Gérer le serveur
         .addStringOption(option =>
             option.setName('user_id')
                 .setDescription("L'ID de l'utilisateur à débannir.")
