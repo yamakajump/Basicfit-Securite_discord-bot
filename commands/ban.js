@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('ban')
         .setDescription("Bannir définitivement un utilisateur du serveur.")
-        .setDefaultMemberPermissions('32'), // = Gérer le serveur
+        .setDefaultMemberPermissions('4') // = Banir des membres
         .addUserOption(option =>
             option.setName('user')
                 .setDescription("L'utilisateur à bannir.")

@@ -3,8 +3,8 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('nuke')
-        .setDescription("Réinitialiser un salon en supprimant tout son contenu."),
-        .setDefaultMemberPermissions('32'), // = Gérer le serveur
+        .setDescription("Réinitialiser un salon en supprimant tout son contenu.")
+        .setDefaultMemberPermissions('16'), // = Gérer le serveur
     async execute(interaction) {
         // Vérification des permissions
         if (!interaction.member.permissions.has('MANAGE_CHANNELS')) {

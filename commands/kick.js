@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('kick')
         .setDescription("Expulser un utilisateur du serveur.")
-        .setDefaultMemberPermissions('32'), // = Gérer le serveur
+        .setDefaultMemberPermissions('2') // = Kick des membres
         .addUserOption(option =>
             option.setName('user')
                 .setDescription("L'utilisateur à expulser.")

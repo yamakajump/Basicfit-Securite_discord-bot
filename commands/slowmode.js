@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('slowmode')
         .setDescription("Activer ou modifier le mode lent d'un salon.")
-        .setDefaultMemberPermissions('32'), // = Gérer le serveur
+        .setDefaultMemberPermissions('16') // = Gérer les salons
         .addIntegerOption(option =>
             option.setName('temps')
                 .setDescription("Durée du mode lent en secondes (0 pour désactiver).")

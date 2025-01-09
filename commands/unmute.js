@@ -4,7 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('unmute')
         .setDescription("Enlever le mute d'un utilisateur.")
-        .setDefaultMemberPermissions('32'), // = Gérer le serveur
+        .setDefaultMemberPermissions('4194304') // = Mute des membres
         .addUserOption(option =>
             option.setName('user')
                 .setDescription("L'utilisateur à rétablir.")

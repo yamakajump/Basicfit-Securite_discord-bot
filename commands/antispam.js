@@ -7,7 +7,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('antispam')
         .setDescription("Activer ou désactiver la protection contre les spams.")
-        .setDefaultMemberPermissions('32'), // = Gérer le serveur
+        .setDefaultMemberPermissions('16') // = Gérer les salons
         .addStringOption(option =>
             option.setName('etat')
                 .setDescription("Activer ('on') ou désactiver ('off') la protection antispam.")
@@ -20,7 +20,7 @@ module.exports = {
     async execute(interaction) {
         const state = interaction.options.getString('etat');
 
-        if (!interaction.member.permissions.has('MANAGE_GUILD')) {
+        if (!interaction.member.permissions.has('MANAGE_CHANNELS')) {
             return interaction.reply({ content: "Vous n'avez pas les permissions pour utiliser cette commande.", ephemeral: true });
         }
 

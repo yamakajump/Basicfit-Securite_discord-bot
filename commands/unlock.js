@@ -3,8 +3,8 @@ const { SlashCommandBuilder } = require('discord.js');
 module.exports = {
     data: new SlashCommandBuilder()
         .setName('unlock')
-        .setDescription("Déverrouiller un salon pour permettre à nouveau les messages."),
-        .setDefaultMemberPermissions('32'), // = Gérer le serveur
+        .setDescription("Déverrouiller un salon pour permettre à nouveau les messages.")
+        .setDefaultMemberPermissions('16'), // = Gérer les salons
     async execute(interaction) {
         // Vérification des permissions
         if (!interaction.member.permissions.has('MANAGE_CHANNELS')) {
