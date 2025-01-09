@@ -7,6 +7,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('antispam')
         .setDescription("Activer ou désactiver la protection contre les spams.")
+        .setDefaultMemberPermissions('32'), // = Gérer le serveur
         .addStringOption(option =>
             option.setName('etat')
                 .setDescription("Activer ('on') ou désactiver ('off') la protection antispam.")
