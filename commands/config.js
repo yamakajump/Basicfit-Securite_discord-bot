@@ -22,6 +22,16 @@ module.exports = {
                     option.setName('salon')
                         .setDescription('Salon où envoyer le message de démarrage (optionnel).')
                 )
+        )
+        .addSubcommand(subcommand =>
+            subcommand
+                .setName('add_muterole')
+                .setDescription('Ajoute un rôle de mute au serveur.')
+                .addRoleOption(option =>
+                    option.setName('role')
+                        .setDescription('Rôle à ajouter.')
+                        .setRequired(true)
+                )
         ),
     async execute(interaction) {
         // Vérification explicite des permissions "Gérer le serveur"
