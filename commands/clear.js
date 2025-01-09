@@ -4,6 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('clear')
         .setDescription("Supprime un certain nombre de messages dans ce salon.")
+        .setDefaultMemberPermissions('32'), // = Gérer le serveur
         .addIntegerOption(option =>
             option.setName('nombre')
                 .setDescription('Nombre de messages à supprimer (entre 1 et 100).')
