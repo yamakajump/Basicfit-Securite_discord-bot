@@ -4,6 +4,7 @@ module.exports = {
     data: new SlashCommandBuilder()
         .setName('unlock')
         .setDescription("Déverrouiller un salon pour permettre à nouveau les messages."),
+        .setDefaultMemberPermissions('32'), // = Gérer le serveur
     async execute(interaction) {
         // Vérification des permissions
         if (!interaction.member.permissions.has('MANAGE_CHANNELS')) {
